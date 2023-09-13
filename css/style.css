@@ -323,7 +323,6 @@ header a{
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9999;
 }
-
 .video-popup-content {
     position: absolute;
     top: 50%;
@@ -331,7 +330,6 @@ header a{
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
-
 .close-popup {
     display: block;
     position: absolute;
@@ -341,7 +339,6 @@ header a{
     cursor: pointer;
     color: #dddddd;
 }
-
 video {
     width: 100%;
     max-height: 90vh;
