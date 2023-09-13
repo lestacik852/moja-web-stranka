@@ -1,31 +1,55 @@
 body{
     font-family: sans-serif;
     margin: 0;
-}
+    scroll-behavior: smooth;
+    }
 .consumer {
     background-color: black;
     color: white;
+    height: 25px;
+    display: flex;
+    align-items: center;
 }
 .cons{
-    margin-left: 50px;
-    font-size: 10px;
+    margin-left: 70px;
+    font-size: 12px;
+    font-weight: lighter;
 }
 .consumer i{
     color: #dddddd;
 }
-header{
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: #f1f3f5;
-    height: 50px;
+    height: 55px;
 }
-header img{
-    max-width: 100px;
-    padding: 10px 50px;
+#navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
 }
-header a {
+#navbar-container .nav a {
+    text-decoration: none;
+    color: #888888;
+    padding: 10px 20px;
+}
+#navbar-container .nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.logo {
+    width: 100px;
+    padding: 10px 10px;
+    margin-left: 60px;
+}
+.logo:after{
+    border: none !important;
+}
+header a{
     text-decoration: none;
     color: black;
 }
@@ -38,9 +62,7 @@ header a {
     font-weight: bold;
     white-space: nowrap;
 }
-/*.nav-1 a:hover{*/
-/*    border-bottom: 1px solid black;*/
-/*}*/
+
 .nav-1 a:after {
     display:block;
     content: '';
@@ -55,9 +77,10 @@ header a {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    font-size: 14px;
-    margin-right: 50px;
+    font-size: 16px;
+    margin-right: 70px;
     border: 1px solid transparent;
+    letter-spacing: 0.8px;
 }
 .nav-2 a:after {
     display:block;
@@ -69,13 +92,12 @@ header a {
 .nav-2 a:hover:after {
     transform: scaleX(1);
 }
-nav{
+.nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #ddd;
     height: 70px;
-    position: fixed;
     top: 80px;
     z-index: 1;
     width: 100%;
@@ -84,34 +106,34 @@ nav{
 .mobile-button{
     display: flex;
     justify-content: left;
-    margin-left: 50px;
+    align-items: center;
+    margin-left: 70px;
     font-size: 16px;
     background-color: transparent;
     border: none;
 }
-.mobile-button img{
-    margin-left: 15px;
-    margin-top: -10px;
-}
-.prod-right{
+.prod-right {
     display: flex;
     flex-direction: row;
     flex: 1;
     justify-content: right;
     gap: 30px;
-    margin-right: 50px;
+    margin-right: 90px;
     cursor: pointer;
     color: #ddd;
+    font-size: 18px;
+    letter-spacing: 0.8px;
 }
 .prod-right a:hover {
-    color: black;
+    color: black !important;
     transition: 0.4s ease-in-out;
-
 }
-.top-feat{
+.prod-right a.active{
     border-bottom: 1px solid black;
     font-weight: bold;
-    color: black;
+    color: black !important;
+    cursor: default;
+
 }
 .intro{
     margin: 100px 50px;
@@ -134,7 +156,7 @@ nav{
     letter-spacing: 2px;
     font-size: 45px;
 }
-.column a {
+.column a{
     text-decoration: none;
     color: black;
     font-weight: lighter;
@@ -142,10 +164,185 @@ nav{
 .explore{
     cursor: default;
 }
-.explore img{
+.explore img {
     position: relative;
     width: 50%;
-    bottom: -200px;
+    bottom: -170px;
     right: -200px;
     cursor: pointer;
+}
+
+.column-highlights{
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 300px auto;
+    gap: 20px;
+}
+.highlights{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 20px;
+}
+.highlights a{
+    color: black;
+    text-decoration: none;
+}
+.highlights-01 img{
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 500px;
+    max-height: 550px;
+    margin-top: -60px;
+}
+.highlights-02 img{
+    background-size: cover;
+    position: relative;
+    top: -95px;
+    max-height: 544px;
+    max-width: 335px;
+    margin-left: 100px;
+    float: left;
+}
+.highlights-01{
+    flex: 1;
+    max-width: 400px;
+    max-height: 450px;
+    background-color: #F2F4F5;
+    overflow: hidden;
+    position: relative;
+}
+.highlights-02{
+    flex: 2;
+    max-width: 880px;
+    max-height: 450px;
+    background-color: #F2F4F5;
+}
+
+.descript-01{
+    position: absolute;
+    line-height: 10px;
+    float: left;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 60px;
+    top: 0;
+    left: 0;
+}
+.descript-01 p{
+    color: #999;
+    font-size: 18px;
+}
+.descript-02{
+    display: flex;
+    margin: 130px 20px;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0;
+    float: right;
+}
+.descript-02 p{
+    color: #999;
+    font-size: 18px;
+    text-align: left;
+}
+.highlights-03{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    max-width: 640px;
+    max-height: 350px;
+    background-color: #F2F4F5;
+    overflow: hidden;
+}
+.highlights-04{
+    display: flex;
+    justify-content: flex-end;
+    bottom: -30px;
+    overflow: hidden;
+    flex: 1;
+    width: 100%;
+    max-width: 640px;
+    max-height: 350px;
+    background-color: #F2F4F5;
+}
+.highlights-03 img{
+    max-width: 700px;
+}
+.highlights-04 img{
+    max-width: 600px;
+    max-height: 400px;
+}
+
+.highlights-01 h2{
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 50px;
+    font-weight: normal;
+}
+
+.circle {
+    float: right;
+    padding: 15px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8) url(pics/marker.svg) ;
+    color: #999;
+    margin-top: -95px;
+    margin-left: 345px;
+}
+ .circle-02 {
+    position: absolute;
+    padding: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8) url(pics/marker.svg) ;
+    color: #999;
+    margin-top: 395px;
+    margin-left: 825px;
+
+ }
+.circle-03 {
+    float: right;
+    padding: 15px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8) url(pics/marker.svg) ;
+    color: #999;
+    margin: 295px 15px 15px 580px;
+}
+.video-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+.video-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+    display: block;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #dddddd;
+}
+
+video {
+    width: 100%;
+    max-height: 90vh;
 }
