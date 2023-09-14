@@ -112,6 +112,9 @@ header a{
     background-color: transparent;
     border: none;
 }
+.mobile-button img{
+    width: 25px;
+}
 .prod-right {
     display: flex;
     flex-direction: row;
