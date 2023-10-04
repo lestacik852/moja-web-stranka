@@ -2,7 +2,8 @@ body{
     font-family: sans-serif;
     margin: 0;
     scroll-behavior: smooth;
-    }
+
+}
 .consumer {
     background-color: black;
     color: white;
@@ -345,4 +346,15 @@ header a{
 video {
     width: 100%;
     max-height: 90vh;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-cover{
+    max-width: 1250px;
+}
+.mobile-come{
 }

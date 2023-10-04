@@ -85,25 +85,77 @@
                   <div class="circle-03"><i class="fa-solid fa-chevron-down"></i></div></a>
           </div>
     </section>
+    <section class="intro">
+        <p class="row">
+            <div><h1 style="font-size: 65px;">Be the One</h1>
+            <img class="mobile-come" src="pics/huawei-p60-id.webp" alt=""></div>
+<!--            <div class="mobile-cover-container">-->
+            <img class="mobile-cover" src="pics/huawei-p60-id-video.webp" alt=""></p>
+<!--        </div>-->
+    </section>
 </main>
-<script>
-    const navbarContainer = document.getElementById('navbar-container');
-    const initialOffset = navbarContainer.getBoundingClientRect().top;
-
-    function updateNavbarPosition() {
-        const scrollY = window.scrollY || window.pageYOffset;
-
-        if (scrollY >= initialOffset) {
-            navbarContainer.style.top = '0';
-        } else {
-            navbarContainer.style.top = initialOffset - scrollY + 'px';
-        }
-    }
-
-    window.addEventListener('scroll', updateNavbarPosition);
-</script>
 
 <script>
+    // const zoomElement = document.querySelector(".mobile-cover");
+    // const zoomOther = document.querySelector(".mobile-come");
+    // let zoom = 1;
+    // const ZOOM_SPEED = 0.05;
+    // const MAX_ZOOM = 0.65;
+    // const MIN_ZOOM = 1;
+    // document.addEventListener("wheel", function(e) {
+    //
+    //     if(e.deltaY < 0){
+    //         zoom += ZOOM_SPEED;
+    //     }
+    //     else {
+    //         zoom -= ZOOM_SPEED;
+    //     }
+    //     // Check if zoom exceeds the maximum limit
+    //     if (zoom < MAX_ZOOM) {
+    //         zoom = MAX_ZOOM;
+    //     }
+    //     if (zoom > MIN_ZOOM){
+    //         zoom = MIN_ZOOM;
+    //     }
+    //
+    //     // Update the zoom using CSS transform
+    //     zoomElement.style.transform = `scale(${zoom})`;
+    //     zoomOther.style.transform = `scale(${zoom})`;
+    // });
+    //
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const mobileCoverContainer = document.querySelector(".mobile-cover-container");
+    //     const zoomElement = document.querySelector(".mobile-cover");
+    //     let zoom = 1;
+    //     const MAX_ZOOM = 0.65;
+    //
+    //     // Set initial scale for zoomElement
+    //     zoomElement.style.transition = "transform 0.3s ease-in-out"; // Add a transition effect
+    //
+    //    // Function to handle zooming
+    //     function handleZoomEntry(entries, observer) {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 // Element is in the viewport, start zooming out
+    //                 zoom = MAX_ZOOM;
+    //                 zoomElement.style.transform = `scale(${zoom})`;
+    //                 observer.unobserve(entry.target); // Stop observing once the element is visible
+    //             }
+    //         });
+    //     }
+    //
+    //     // Create an Intersection Observer
+    //     const observer = new IntersectionObserver(handleZoomEntry, {
+    //         root: null, // Use the viewport as the root
+    //         threshold: 0.5, // Trigger when the element is partially visible
+    //     });
+    //
+    //     // Observe the mobileCoverContainer
+    //     observer.observe(mobileCoverContainer);
+    //
+    //     // Other event listeners...
+    // });
+
 const videoLink = document.querySelector('.intro h2 a');
 const videoPopup = document.getElementById('video-popup');
 const closePopup = document.getElementById('close-popup');
